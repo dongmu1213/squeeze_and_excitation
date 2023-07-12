@@ -69,7 +69,7 @@ class SpatialSELayer(nn.Module):
         :param num_channels: No of input channels
         """
         super(SpatialSELayer, self).__init__()
-        self.conv = nn.Conv2d(num_channels, 1, 1)
+        self.conv = nn.Conv2d(num_channels, 1, 1) ## 输入通道，输出通道，核1即（1*1）
         self.sigmoid = nn.Sigmoid()
 
     def forward(self, input_tensor, weights=None):
