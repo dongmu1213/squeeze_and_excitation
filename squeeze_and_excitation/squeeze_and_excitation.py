@@ -120,7 +120,7 @@ class ChannelSpatialSELayer(nn.Module):
         :param input_tensor: X, shape = (batch_size, num_channels, H, W)
         :return: output_tensor
         """
-        output_tensor = torch.max(self.cSE(input_tensor), self.sSE(input_tensor))
+        output_tensor = torch.max(self.cSE(input_tensor), self.sSE(input_tensor))   ## 两个张量各个位置取最大值。但是论文中是将两张量相加啊，与代码不相符
         return output_tensor
 
 
